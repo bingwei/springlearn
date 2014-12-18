@@ -5,10 +5,12 @@ import com.smart.dao.UserDao;
 import com.smart.domain.LoginLog;
 import com.smart.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by Administrator on 2014/12/16.
  */
+@Service
 public class UserService {
     @Autowired
     private UserDao userDao;

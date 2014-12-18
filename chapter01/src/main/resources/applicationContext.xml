@@ -30,7 +30,8 @@
              p:dataSource-ref="dataSource"/>
 
        <aop:config proxy-target-class="true">
-              <aop:pointcut id="serviceMethod" expression="execution(* com.smart.service..*(..))"/>
+           <aop:pointcut id="serviceMethod" expression="execution(* com.smart.service..*(..))"/>
+           <aop:advisor pointcut-ref="serviceMethod" advice-ref="txAdvice"/>
        </aop:config>
        <tx:advice id="txAdvice" transaction-manager="transactionManager">
               <tx:attributes>
