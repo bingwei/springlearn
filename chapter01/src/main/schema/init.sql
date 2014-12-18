@@ -21,5 +21,13 @@ CREATE TABLE t_login_log(
 
 
 INSERT INTO t_user (user_name, PASSWORD) VALUES ('admin', '123456');
-
 SELECT * FROM t_user;
+
+
+# 创建用户,赋予权限
+USE mysql;
+CREATE USER 'dev'@'%' IDENTIFIED BY '123456';
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP ON sampledb.* TO dev@localhost IDENTIFIED BY '123456';
+
+# 修改root密码
+# mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('phantom');

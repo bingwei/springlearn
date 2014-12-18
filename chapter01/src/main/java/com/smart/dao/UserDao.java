@@ -37,7 +37,7 @@ public class UserDao {
                     @Override
                     public void processRow(ResultSet resultSet) throws SQLException {
                         user.setUserId(resultSet.getInt("user_id"));
-                        user.setUserName(resultSet.getNString(userName));
+                        user.setUserName(resultSet.getNString("user_name"));
                     }
                 });
 
